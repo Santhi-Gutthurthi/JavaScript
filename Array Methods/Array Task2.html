@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Table Task </title>
+</head>
+<body>
+	<center>
+		<h2>Trainee Details</h2>
+		<table id="abc" border="1" cellspacing="0" cellpadding="6">
+		</table>
+		<script type="text/javascript">
+	    let trainees = [
+	    {
+			'name':'santhi',
+			'rollno':'049',
+			'branch':'EEE'
+		},	
+	    {
+			'name':'madhu',
+			'rollno':'086',
+			'branch':'P.G'
+		},{
+			'name':'uma',
+			'rollno':'048',
+			'branch':'ECE'
+		},{
+			'name':'rani',
+			'rollno':'004',
+			'branch':'CSE'
+		}]
+		let tr = ''; 
+		tr += "<tr><th>S.No</th><th>Name</th><th>Roll.no</th><th>Branch</th></tr>"
+		trainees.map(function(individual_trainees,i,arr){
+		    tr += "<tr><td>"+(i+1)+"</td><td>"+individual_trainees.name+"</td><td>"+individual_trainees.rollno+"</td></td><td>"+individual_trainees.branch+"</td></tr>"
+		})
+		console.log('tr')
+		document.getElementById('abc').innerHTML = tr
+		</script>
+    </center>
+</body>
+</html>

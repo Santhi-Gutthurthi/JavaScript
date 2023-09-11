@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EVENTS TASK</title>
+    <style type="text/css">
+      button{
+        border: 2px solid black;
+        margin: 3px;
+        color: white;
+        background-color: lightblue;
+      }  
+    </style>
+</head>
+<body>
+    <center>
+    <button onclick="nextslide()">Next Slide</button>
+    <button onclick="prevslide()">Previous Slide</button>
+    <p>Sliders Images</p>
+    <div id="output_id">
+        <img src='Images/1.Jpg'style='width:190px;height:200px;'/> 
+    </div>
+    <script type="text/javascript">
+        var i=1;
+        function nextslide(){
+            if(i<5){
+            var res = ++i
+            // if(res!=0){
+                  document.getElementById('output_id').innerHTML="<img src='Images/"+res+".Jpg'style='width:190px;height:200px;border:1px solid black;'/>"
+               // }   
+            }
+        }
+        function prevslide(){
+            if(i>1){
+                var res =--i
+                // if(res!=6){
+                    document.getElementById('output_id').innerHTML="<img src='Images/"+res+".Jpg'style='width:190px;height:200px;border:1px solid black;'/>"
+                // }
+            }
+        } 
+    </script>
+    </center>
+</body>
+</html>

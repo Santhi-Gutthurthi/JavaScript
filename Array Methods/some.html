@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>some</title>
+</head>
+<body>
+    <h2>Array Methods-some()</h2>
+    <p>This method returns a boolean value with check if condition is true exist iteration.</p>
+    <script type="text/javascript">
+    	let students_emails =['santhi@gmail.com','santhisri@gmail.com','santhirani@gmail.com',];
+    	let exist_emailornot=students_emails.some(function(email,i,index){
+    		//console.log(score);
+    		return email =='santhi@gmail.com';
+    	})
+    	console.log(exist_emailornot);
+    </script>
+</body>
+</html>

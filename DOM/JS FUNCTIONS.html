@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)file:///C:/Users/Dell/Desktop/FSD/JAVA%20SCRIPT/JS_Function.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS FUNCTIONS</title>
+</head>
+<body>
+    <script type="text/javascript">
+    	// // functionkeyword functionname(arg1,arg2.....argn)
+    	// // {
+    	// // 	statements
+    	// // 	return statement
+    	// // }
+    	// //normal function with no parameter
+    	// function test(){
+    	// 	alert("testing")
+    	// 	//document.write("JS function")
+    	// }
+    	// test() //calling the function
+
+
+    	// //function with one parameter
+    	// function santhi(a){
+    	// 	document.write(a)
+    	// }
+    	// santhi('Gutthurthi')
+
+
+    	//function with one parameter
+    	var a = prompt("Scan Your ID");
+    	function scanyourid(rollno){
+    		document.write(a)
+    	}
+        scanyourid(a);
+
+        
+        // var x =function mul(a,b){
+        // 	document.write(a*b)
+        // }
+        // mul(2,5)
+
+
+        // anonymous function is function without having a function name
+        var x =function mul(a,b){
+        	return(a*b)
+        }
+        document.write(x(2,5))
+        document.write("<br>")
+        
+        var x =function mul(a){
+        	return(a*a*a)
+        }
+        document.write(x(8)) //cubes
+        document.write("<br>")
+
+
+        //es6 arrow function "=>" |never use function keyword
+        add=(a,b)=>{
+        	document.write(a+b);
+        }
+        add(10,20)
+        document.write("<br>")
+        //arrow function with one argument
+        add= a =>{
+        	document.write(a);
+        }
+        add('Santhi')
+        document.write("<br>")
+
+
+        //arrow funtion with no arguments
+        test = _ =>{
+        	document.write("Testing....")
+        }
+        test()
+
+
+
+
+
+    	// function add(a,b)
+    	// {
+    	//     result=a+b;
+    	// 	return result;
+    	// }
+    	// document.write(add(10,20))
+    	// function add(a=0,b=0)
+    	// {
+    	//     result=a+b;
+    	// 	return result;
+    	// }
+    	// document.write(add())
+    </script>21255-ec-04610<br>512<br>30<br>Santhi<br>Testing....
+</body></html>

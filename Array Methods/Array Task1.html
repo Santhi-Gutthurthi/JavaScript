@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>unordered list</title>
+</head>
+<body>
+    <ul>
+        <li>Name</li>
+        <li>Roll no.</li>
+        <li>Email</li>
+        <li>Branch</li>
+    </ul>
+    <ul style="list-style-type:square" id="traineesList"></ul>
+    
+    <script type="text/javascript">
+        let trainees = [{
+            'name': 'Santhi',
+            'rollno': 1234,
+            'email': 'santhi@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'madhu',
+            'rollno': 1256,
+            'email': 'madhu@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'uma kumari',
+            'rollno': 1567,
+            'email': 'uma@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'santhisri',
+            'rollno': 1789,
+            'email': 'santhisri@gmail.com',
+            'branch': 'cse'
+        }];
+
+        let traineesList = document.getElementById('traineesList');
+
+        trainees.map(function (individual_trainee) {
+            let ul = document.createElement('ul');
+
+            let li1 = document.createElement('li');
+            li1.innerText = individual_trainee.name;
+
+            let li2 = document.createElement('li');
+            li2.innerText = individual_trainee.rollno;
+
+            let li3 = document.createElement('li');
+            li3.innerText = individual_trainee.email;
+
+            let li4 = document.createElement('li');
+            li4.innerText = individual_trainee.branch;
+
+            ul.appendChild(li1);
+            ul.appendChild(li2);
+            ul.appendChild(li3);
+            ul.appendChild(li4);
+
+            traineesList.appendChild(ul);
+        });
+    </script>
+</body>
+</html>

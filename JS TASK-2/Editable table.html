@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table with Add, Edit, and Delete</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        button{
+           padding-left:15px;
+           padding-right: 15px; 
+           background-color:white ;
+           border: 1px solid white;
+        }
+        *{
+           box-sizing: border-box;
+        }
+        div{
+            background-color: whitesmoke;
+            margin: 30px;
+            padding:30px;
+        }
+        tr{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h2>Table with Add, Edit, and Delete</h2>
+    <div>
+    <!-- <h4 style="padding-right:230px;">Product Deatails</h4> -->
+    <table id="myTable" border="1" cellspacing="0" cellpadding="5" >    
+    <h4 style="padding-right:150px;display: inline;">Product Deatails</h4>
+    <button onclick="addRow()" style="border-radius: 20px; background-color: lightskyblue;color: white;padding: 5px;border: 1px solid lightskyblue;margin: 5px;"> + Add New</button><br>
+        <tr>
+            <th>Product id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>456789</td>
+            <td>Realme mobile</td>
+            <td>16000</td>
+            <td><button onclick="editRow(this)"><i class="fa-solid fa-pen" style="color:yellow;"></i></button><button onclick="deleteRow(this)"><i class="fa-solid fa-trash" style="color:red;"></i></button></td>
+        </tr>
+         <tr>
+            <td>123456</td>
+            <td>MI mobile</td>
+            <td>18000</td>
+            <td><button onclick="editRow(this)"><i class="fa-solid fa-pen" style="color:yellow;"></i></button><button onclick="deleteRow(this)"><i class="fa-solid fa-trash" style="color:red;"></i></button></td>
+        </tr>
+         <tr>
+            <td>365648</td>
+            <td>Vivo mobile</td>
+            <td>20000</td>
+            <td><button onclick="editRow(this)"><i class="fa-solid fa-pen" style="color:yellow;"></i></button><button onclick="deleteRow(this)"><i class="fa-solid fa-trash" style="color:red;"></i></button></td>
+        </tr>
+    </table>
+    </center>
+    </div>
+    <script>
+        function editRow(button) {
+            var row = button.parentNode.parentNode;
+            var cells = row.getElementsByTagName("td");
+            for (var i = 0; i < cells.length - 1; i++) {
+                cells[i].innerHTML = "<input type='text' value='" + cells[i].innerText + "'>";
+            }
+            cells[cells.length - 1].innerHTML = "<button onclick='editRow(this)'>Save</button><button onclick='deleteRow(this)'><i class='fa-solid fa-trash'.style.color:'red';></button>";
+            cells[cells.length - 1].innerHTML = "<button onclick='saveRow(this)'>Save</button><button onclick='deleteRow(this)'><i class='fa-solid fa-trash'.style.color:'red';></button>";
+            save.style.color='green'
+        }
+
+        function saveRow(button) {
+            var row = button.parentNode.parentNode;
+            var cells = row.getElementsByTagName("td");
+            for (var i = 0; i < cells.length - 1; i++) {
+                cells[i].innerHTML = cells[i].getElementsByTagName("input")[0].value;
+            }
+            cells[cells.length - 1].innerHTML = "<button onclick='editRow(this)'>Edit</button><button onclick='deleteRow(this)'><i class='fa-solid fa-trash'.style.color:'red';></button>";
+        }
+
+        function deleteRow(button) {
+           var q= confirm('first enter the data')
+            if (q==true) {
+                var row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+            }    
+        }
+        
+         function addRow() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(table.rows.length);
+            var cell0 = row.insertCell(0);
+            var cell1 = row.insertCell(1);
+            var cell2 = row.insertCell(2);
+            var cell3 = row.insertCell(3);
+            cell0.innerHTML = "<input type='text'>";
+            cell1.innerHTML = "<input type='text'>";
+            cell2.innerHTML = "<input type='text'>";
+            cell3.innerHTML = "<button onclick='saveRow(this)'.style.color='green'>Save</button><button onclick='deleteRow(this)'><i class='fa-solid fa-trash'.style.color:'red';></button>";
+        }
+    </script>
+</body>
+</html>

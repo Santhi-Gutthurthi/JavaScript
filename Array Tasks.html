@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Tasks</title>
+</head>
+<body>
+	<div style="background-color:whitesmoke;margin: 20px;padding: 50px;">
+    <h2>Array Methods</h2>
+    <script type="text/javascript">
+    //map() method
+    let trainees=['santhi','madhu','uma','sans'];
+   	let names=trainees.map(function(ele){
+   		console.log(ele)
+   	})
+   	let trainees1=[{
+   		'name':'santhi',
+   		'rollno':21255
+   	},{
+   		'name':'madhu',
+   		'rollno':21255
+   	}];
+   	trainees1.map(function(individual_trainee,i,arr)
+   	{
+   		console.log(individual_trainee.name+" "+individual_trainee.rollno)
+   		document.write(individual_trainee.name+" "+individual_trainee.rollno+"<br>")
+   	
+    })
+    document.write("<br><br>")
+    
+
+    //filter() method
+    let nums =[8,9,60,4,7,3];
+
+    let even_nums = nums.filter(function(ele){
+        return ele%2 ==0
+    })
+    console.log(even_nums)
+    document.write("filter of even numbers : "+even_nums+"<br>")
+
+    let odd_nums = nums.filter(function(ele){
+        return ele%2 !==0
+    })
+    console.log(odd_nums)
+    document.write("filter of odd numbers : "+odd_nums)
+    document.write("<br><br>")
+
+
+
+    //sort() method
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.write("fruits")
+    fruits.sort();
+    document.write("sorting of fruits : "+fruits)
+    document.write("<br><br>")
+
+
+
+    //forEach() method
+    let salaries =[40000,25000,30000];
+    console.log(salaries);
+    salaries.forEach(test);
+    function test(amount,index,arr)
+    {
+    	var increment =amount/10;
+    	console.log(increment)
+    	arr[index]=amount+increment;
+    }
+    console.log(salaries)
+    document.write("forEach of salaries : "+salaries)
+    document.write("<br><br>")
+
+
+
+    //concat() method
+    const arr1 = ["Santhi", "madhu"];
+    const arr2 = ["kumari", "uma", "madhu"];
+
+    const children = arr1.concat(arr2); 
+    document.write("concat of two arrays : "+children)
+    document.write("<br><br>")
+ 
+
+
+    //every() method
+    let students_marks =[55,78,87,54,64];
+    let final_result=students_marks.every(function(score){
+    	//console.log(score);
+    	return score >35;
+    })
+    console.log(final_result);
+    document.write("every() method : "+final_result)
+    document.write("<br><br>")
+
+
+
+    //some() method
+    let students_emails =['santhi@gmail.com','santhisri@gmail.com','santhirani@gmail.com',];
+    let exist_emailornot=students_emails.some(function(email,i,index){
+    	//console.log(score);
+    	return email =='santhi@gmail.com';
+    })
+    console.log(exist_emailornot);
+    document.write("some() method : "+exist_emailornot)
+    document.write("<br><br>")
+
+
+
+    //includes() method
+    const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+    document.write(fruits1)
+    document.write("<br>")
+    document.write("inclide fruit : "+fruits1.includes("Mango"));
+    document.write("<br><br>")
+
+
+
+    //join() method
+    //it returns array as a string
+    const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+    let text = fruits2.join();
+    document.write("join() method : "+text)
+    document.write("<br><br>")
+
+
+
+    //reduce() method
+    const numbers = [175, 50, 25];
+    document.write("reduce of array : "+numbers.reduce(myFunc));
+    function myFunc(total, num)
+    {
+          return total - num;
+    }
+    document.write("<br><br>")
+
+
+
+    //find() method
+    let traines=['vijay','santhi','madhu'];
+    let getonename=traines.find(function(name)
+    {
+    	return name.startsWith('s');
+    })
+    console.log(getonename);
+    document.write("find() method : "+getonename)
+    document.write("<br><br>")
+
+
+    //findIndex() method
+    const ages = [3, 10, 18, 20];
+    document.write("findindex() method : "+ages.findIndex(checkAge));
+    function checkAge(age) {
+    return age > 18;
+    }
+    document.write("<br><br>")
+
+
+    //indexOf() method
+    const fruits3 = ["Banana", "Orange", "Apple", "Mango", "Apple"];
+    let index = fruits3.indexOf("Apple", 3);
+    document.write("indexOf() method : "+index)
+    document.write("<br><br>")
+
+
+    //fill() method
+    const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+    document.write(fruits4+"<br>")
+    document.write("fill() method : "+fruits4.fill("Kiwi"));
+    document.write("<br><br>")
+
+
+    //slice() method
+    const fruits5 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const citrus = fruits5.slice(1, 3);
+    document.write("slice() method : "+citrus);
+    document.write("<br><br>")
+
+
+    //reverse() method
+    const fruits6 = ["Banana", "Orange", "Apple", "Mango","Grapes"];
+    document.write("reverse() method : "+fruits6.reverse());
+    document.write("<br><br>")
+
+
+    //push() method
+    const flowers = ["Rose", "Jasmine", "Marigold", "lotus"];
+    fruits.push("Kiwi");
+    document.write("push() method : "+flowers);
+    document.write("<br><br>")
+
+    
+    //pop() method
+    const colours = ["white", "green", "pink", "black"];
+    colours.pop();
+    document.write("pop() method : "+colours);
+    document.write("<br><br>")
+ 
+
+    //shift() method
+    const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits5.shift();
+    document.write("shift() method : "+fruits7);
+    document.write("<br><br>")
+ 
+
+    //unshift() method
+    const fruits8 = ["Banana", "Orange", "Apple", "Mango"];
+    fruits8.unshift("Lemon", "Pineapple");
+    document.write("unshift() method : "+fruits8);
+    </script>
+    </div>
+</body>
+</html>

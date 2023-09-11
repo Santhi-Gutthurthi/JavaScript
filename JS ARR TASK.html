@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TASK</title>
+</head>
+<body>
+    <script>
+    	let obj =[{
+        	'Name':'1.Santhi',
+        	'Rollno':46,
+        	'college':'AEC',
+        	'Branch':'ECE',
+            'Email':'Santhi@gmail.com'
+        },
+        {
+            'Name':'2.Madhu',
+        	'Rollno':46,
+        	'college':'AECT',
+        	'Branch':'PG',
+            'Email':'Madhu@123gmail.com'
+        },
+        {
+            'Name':'3.Madhu',
+            'Rollno':46,
+            'college':'AECT',
+            'Branch':'PG'
+        }]
+            console.log(obj.length);
+    	// for (var i = 0 ;i<obj.length;i++)
+    		 // {
+    	     //  console.log(i+1,obj[i].Name+" ",
+    	     //  	obj[i].Rollno+" ",
+    	     //  	obj[i].college+" ",
+    	     //  	obj[i].Branch+" ",)
+    	     //  // document.write("<br>");
+    	     //  document.write(i+1,obj[i].Name+" ",
+    	     //  	obj[i].Rollno+" ",
+    	     //  	obj[i].college+" ",
+    	     //  	obj[i].Branch+" ",)
+    	     //     document.write("<br>");
+       // for (const key in obj) {
+       //       const value = obj[key];
+       //       console.log(key, value);
+       //      }
+            // // DYNAMICALLY
+            // for (var i=0;i<obj.length;i++)
+            // {
+            //      for (var key in obj[i])
+            //      {
+            //      document.write(obj[i][key]+"   ")
+            //      console.log(obj[i][key]+"   ")
+            //      }
+            //      document.write("<br>");
+            // }
+            for (let i=0;i<obj.length;i++)
+            {
+                 for (let key in obj[i])
+                 {
+                 document.write(obj[i][key]+"   ")
+                 console.log(obj[i][key]+"   ")
+                 }
+                 document.write("<br>");
+            }
+            // for (const i=0;i<obj.length;i++)
+            // {
+            //      for (const key in obj[i])
+            //      {
+            //      // const value = obj[key];
+            //      console.log(key, value);
+            //      document.write(obj[i][key]+"   ")
+            //      console.log(obj[i][key]+"   ")
+            //      }
+            //      document.write("<br>");
+            // }
+
+    </script>
+</body>
+</html>

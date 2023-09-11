@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String Methods</title>
+</head>
+<body>
+	<div style="background-color:ghostwhite;margin: 20px;padding: 50px;">
+    <h2>STRING METHODS</h2>
+    <script type="text/javascript">
+    function getstr(str)
+    {
+    	document.write("<b>"+str+"<b><br>")
+    }
+    let string='Santhi';
+      //substr() method
+      //substr(startpos,length of the characters from the first position)
+      getstr("substr of string = "+string.substr(2,4))
+      getstr("substr of string = "+string.substr(0,4))
+      getstr("substr of string = "+string.substr(1,4)+'<br>')
+
+
+
+      //substring() method
+      //it is allowing the positive indexes
+      getstr("substring of string = "+string.substring(1,4))
+      getstr("substring of string = "+string.substring(5,1))
+      getstr("substring of string = "+string.substring(2,5))
+      getstr("substring of string = "+string.substring(-1)+'<br>')
+
+
+      //replace() method
+      //replace() searches a string for a value, and returns a new string with the specified value replaced
+      getstr("replace of string = "+string.replace('Santhi','Santhi Rani'))
+      getstr("replace of string = "+string.replace('Santhi','Gutthurthi')+'<br>')
+
+
+      //Search() method
+      //search() searches a string for a value and returns the position of first the match
+      let name='My name is Santhi';
+      getstr("Search of string = "+name.search('Santhi'))
+      getstr("Search of string = "+name.search('My'))
+      getstr("Search of string = "+name.search('name')+'<br>')
+
+      //toLocaleLowerCase() method
+      //toLocaleLowerCase() converts a string to lowercase letters, using current locale.
+      getstr("LowerCase of string = "+name.toLowerCase())
+      getstr("LowerCase of string = "+string.toLowerCase()+'<br>')
+
+
+      //toLocaleLowerCase() method
+      //toLocaleUpperCase() converts a string to uppercase letters, using current locale
+      getstr("UpperCase of string = "+name.toUpperCase())
+      getstr("UpperCase of string = "+string.toUpperCase()+'<br>')
+
+      //indexOf() method
+      //indexOf() returns the position of the first occurrence of a value in a string.
+      getstr("Index of string = "+string.indexOf('S'))
+      getstr("Index of string = "+string.indexOf('i')+'<br>')
+
+
+      //includes() method
+      //includes() returns true if a string contains a specified string.
+      //include method - returns boolean values
+      getstr("includes of string = "+name.includes('Santhi'))
+      getstr("includes of string = "+string.includes('Santhi Rani')+'<br>')
+
+      //slice() method
+      //it is allows positive and negative index values
+      getstr('slice of string = '+string.slice(1,4));//1,(4-1)
+      getstr('slice of string = '+name.slice(-3));//-3,-2,-1
+      getstr('slice of string = '+name.slice(-4,-2)+'<br>');//-4,(-2-1)=-3  i.e.,-4,-3
+
+
+      //concat() method
+      //The concat() method joins two or more strings.
+      let s='Santhi';
+      let a='Rani';
+      getstr("concat of two strings = "+s.concat(a))
+      getstr("concat of two strings = "+a.concat(s)+'<br>')
+
+      //lastIndexOf() method
+      //lastIndexOf() returns the index of the last occurrence of a specified value in a string.
+      getstr("Last Index of String = "+name.lastIndexOf('n')+'<br>')
+
+      //charCodeAt() method
+      //charCodeAt() returns the Unicode of the character at a specified position in a string.
+       getstr("charcodeAt of string = "+string.charCodeAt('a')+'<br>')
+
+      //trim() method
+      //removing the spaces from left or right
+      getstr("trim() method = "+name.trim()+'<br>')
+
+      
+      //charAt() method
+      //>charAt() returns the character at a specified index (position) in a string.
+      getstr("Chat At ="+string.charAt(2)+'<br>')
+
+
+      //valueOf() method
+      //valueOf() returns the primitive value of a string.
+      getstr("value of string ="+string.charAt(4)+'<br>')
+
+      //split() method
+      //split() splits a string into an array of substrings, and returns the array.
+      let name2='Santhi&Madhu,Santhi';
+      console.log(name2.split(","))
+      console.log(name2.split("&")+'<br>')
+      getstr("splitting of string = "+name2.split("&"))
+      getstr("splitting of string = "+name2.split(",")+'<br>')
+
+
+
+
+      //tostring() method
+      //toString() returns the content of a string.
+      getstr("tostring of string = "+string.toString())
+      getstr("tostring of string = "+name.toString()+'<br>')
+
+
+      //match() method
+      //match() searches for a match in a string.
+      getstr("match of string = "+string.match('santhi'))
+      getstr("match of string = "+string.match('Santhi'))
+    </script>
+    </div>
+</body>
+</html>

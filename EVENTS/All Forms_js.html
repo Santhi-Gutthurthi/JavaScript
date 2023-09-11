@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All forms task</title>
+</head>
+<body>
+   <form style="background: lightseagreen;padding: 30px;">
+        <label>Enter your Name</label>
+        <input id="output_id" type="text" name="" value="" onkeyup="sample(this.value)">
+        <br>
+        <span id="sp_id"></span><br>
+        <label>Enter your Phone Number</label>
+        <input id="output1_id" type="number" onkeyup="sample1(this.value)"><br/>
+        <span id="sp1_id"></span><br>
+        <label>DOB</label>
+        <input type="date" id="output2_id" onkeyup="sample2(this.value)">
+        <span id="sp2_id"></span>
+        <br/><br/>
+        <label>Enter your password</label>
+        <input id="output3_id" type="password" placeholder="password" onkeyup="sample3(this.value)">
+        <span id="sp3_id"></span>
+        <br/><br/>
+        <label>Enter your Email Number</label>
+        <input id="output4_id" type="Email" onkeyup="sample4(this.value)">
+        <span id="sp4_id"></span>
+        <br/><br/>
+        <label>Enter your Address</label>
+        <input id="output5_id" type="address" onkeyup="sample5(this.value)">
+        <span id="sp5_id"></span>
+        <br/><br/>
+        <label>Gender:</label>
+        Male<input type="radio"name="gender">
+        Female<input type="radio"name="gender">
+        <br/><br/>
+        <label>Enter your college</label>
+        <select id="output_id">
+            <option>--select--</option>
+            <option>ADTP</option>
+            <option>AEC</option>
+            <option>AECT</option>
+        </select>
+        <br/><br/>
+        <label>Pick a color</label>
+        <input id="output_id" type="color" onkeyup="sample(this.value)">
+        <span id="sp_id"></span>
+        <br/><br/>
+        <label>Range</label>
+        <input id="output_id" type="range" onkeyup="sample(this.value)">
+        <span id="sp_id"></span>
+        <br/><br/>
+        <label>upload a file</label>
+        <input id="output_id" type="file" onkeyup="sample(this.value)">
+        <span id="sp_id"></span>
+        <br/><br/>
+        <label>Check</label>
+        <input type="Checkbox">
+        <br/><br/>
+        <input id="output_id" type="Submit" onkeyup="sample(this.value)">
+        <span id="sp_id"></span>
+        <br/><br/>
+        <input id="output_id" type="Reset" onkeyup="sample(this.value)">
+        <span id="sp_id"></span>
+    </form>
+    <script type="text/javascript">
+        function sample(name){
+            if(name==""){
+                document.getElementById('sp_id').innerText ='Please enter your name';
+                document.getElementById('sp_id').style.color = 'red';
+            }
+            else{
+                document.getElementById('output_id').innerText =name;
+            }
+        }
+        function sample1(number){
+            if(number==""){
+                document.getElementById('sp1_id').innerText ='Please enter your phone number';
+                document.getElementById('sp1_id').style.color = 'red';
+            }
+            else{
+                document.getElementById('output1_id').innerText =number;
+            }
+        }
+        function sample2(DOB){
+            if(DOB==""){
+                document.getElementById('sp2_id').innerText ='Please enter your DOB';
+                document.getElementById('sp2_id').style.color = 'red';
+            }
+            else{
+                document.getElementById('output2_id').innerText =DOB;
+            }
+        }
+        function sample3(password){
+            if(password==""){
+                document.getElementById('sp3_id').innerText ='Please enter valid password';
+                document.getElementById('sp3_id').style.color = 'red';
+            }
+            else{
+                document.getElementById('output3_id').innerText =password;
+            }
+        }
+        function sample4(email){
+            if(email==""){
+                document.getElementById('sp4_id').innerText ='Please enter valid email';
+                document.getElementById('sp4_id').style.color = 'red';
+            }
+            else{
+                document.getElementById('output4_id').innerText =email;
+            }
+        }
+        function sample5(address){
+            if(address==""){
+                document.getElementById('sp5_id').innerText ='Please enter your address';
+                document.getElementById('sp5_id').style.color = 'red';
+            }
+            else{
+                document.getElementById('output5_id').innerText =address;
+            }
+        }
+    </script>
+</body>
+</html>

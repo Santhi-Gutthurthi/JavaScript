@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>task</title>
+</head>
+<body>
+<form>
+    <center><br>
+    <label>Enter your Name</label>
+    <input id="output_id" type="text" name="" value="" onkeyup="sample(this.value)">
+    <br>
+    <span id="sp_id"></span>
+    </center>
+</form>
+    <script type="text/javascript">
+        function sample(name){
+            if(name==""){
+                document.getElementById('sp_id').innerText ='Please enter your name';
+                document.getElementById('sp_id').style.color = 'red';
+            }
+            else{
+                document.getElementById('output_id').innerText =name;
+            }
+        }
+    </script>
+</body>
+</html>

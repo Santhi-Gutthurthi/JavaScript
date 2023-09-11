@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String Method-1</title>
+</head>
+<body>
+     <h2>String Methods</h2>
+     <table border="1" cellspacing="0" cellpadding="10px">
+     	<tr>
+     		<td>D</td>
+     		<td>r</td>
+     		<td>i</td>
+     		<td>v</td>
+     		<td>e</td>
+     		<td>&nbsp;</td>
+     		<td>R</td>
+     		<td>e</td>
+     		<td>a</td>
+     		<td>d</td>
+     		<td>y</td>
+     	</tr>
+     	<tr>
+     		<td>0</td>
+     		<td>1</td>
+     		<td>2</td>
+     		<td>3</td>
+     		<td>4</td>
+     		<td>5</td>
+     		<td>6</td>
+     		<td>7</td>
+     		<td>8</td>
+     		<td>9</td>
+     		<td>10</td>
+     	</tr>
+     	<tr>
+     		<td>-11</td>
+     		<td>-10</td>
+     		<td>-9</td>
+     		<td>-8</td>
+     		<td>-7</td>
+     		<td>-6</td>
+     		<td>-5</td>
+     		<td>-4</td>
+     		<td>-3</td>
+     		<td>-2</td>
+     		<td>-1</td>
+     	</tr>
+     </table>
+     <script type="text/javascript">
+     	// let s = 'Drive Ready'
+     	// document.write("<b>"+s+"<b><br>")
+     	// document.write(s)
+     	function getstr(str){
+     		document.write("<b>"+str+"<b><br>")
+     	}
+     	let name ='Drive Ready';
+     	// getstr(name)
+     	// getstr(name.length)//to find the length of the string-.length-output=11
+     	// getstr(name.charAt(2))//i- to know the position of the character
+     	// getstr(name.indexOf('v'))//3- to know the position of the index
+     	getstr("Original String="+name)
+     	getstr("String length"+name.length)//to find the length of the string-.length-output=11
+     	getstr("Chat At ="+name.charAt(2))
+     	getstr("Index of="+name.indexOf('v'))
+     	getstr("Index of 2nd way="+name.lastIndexOf('ready'))
+     	getstr("Last Index of String="+name.lastIndexOf('r'))
+     	let name1 ='DRIVE READY';
+     	getstr("To Lower Case="+name1.toLowerCase())
+     	getstr("To Upper Case="+name1.toUpperCase())
+     	let name2='Batch';
+     	let name3='Morning';
+     	let name4='Session'
+     	getstr("Concate of String="+name1.concat(name2))
+     	getstr("Concate of String="+name1.concat(name2,name3,name4))
+     	let username ='Santhi';
+     	getstr("trim() method="+username.trim())//removing the spaces from left or right
+
+     	//converting string into an array =>stringname.split()
+     	let name5='Santhi&Madhu,Santhi'
+     	// console.log(name.split(""));
+     	console.log(name5.split("&"));//[0]=>santhi[1]=>madhu,santhi
+     	console.log(name5.split(","));//[0]=>santhi,madhu=>[1]=>santhi
+     	//to check the starting and ending
+     	let name6='Santhi';
+     	console.log(name6.startsWith('S'));
+     	console.log(name6.startsWith('m'));
+     	console.log(name6.endsWith('i'));
+     	console.log(name6.endsWith('m'));
+
+     	//slice method
+      //ss('slice of string ='+str.slice(startpos,endspos-1))
+      //it is allows positive and negative index values
+      getstr('slice of string='+name.slice(1,4));//1,(4-1)
+      getstr('slice of string='+name.slice(-3));//-3,-2,-1 = ady
+      getstr('slice of string='+name.slice(-4,-2));//-4,(-2-1)=-3  i.e.,-4,-3
+
+      //include method - returns boolean values
+      getstr("includes of string ="+name6.includes('ready'))
+
+      //substring method
+      //it is allowing the positive indexes
+      //let name7='Santhi'
+      getstr("substring of string ="+name.substring(1,4))
+      getstr("substring of string ="+name.substring(5,1))
+      getstr("substring of string ="+name.substring(2,5))
+      getstr("substring of string ="+name.substring(-1))//complete string will come
+
+
+      //substr()method
+      //substr(startpos,length of the characters from the first position)
+      getstr("substr of string ="+name.substr(2,4))
+      getstr("substr of string ="+name.substr(0,4))
+        
+      //charcodeAt method
+      getstr("charcodeAt of string ="+name.charCodeAt('k'))
+
+      //repeat method
+      getstr("repeat of string ="+name.repeat('3'))
+
+      //replace method
+      getstr("replace of string ="+name.replace('Drive Ready','Santhi'))
+     </script>
+</body>
+</html>
